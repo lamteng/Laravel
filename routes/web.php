@@ -1,6 +1,8 @@
 <?php
-
+namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\DB;
+use App\Http\Controllers\Controller;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,5 +16,6 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+$pic_name = DB::select('select pic_name from pics where pic_id = 1', [1]);    
+ return view('frontend.welcome',['name'=> 'Bro'],['pic_name'=> $pic_name]);
 });

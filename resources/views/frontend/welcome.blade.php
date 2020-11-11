@@ -79,7 +79,11 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel, 很高興見到你
+                    Laravel, 很高興見到你, {{$name}}
+                    <?php
+                    foreach ($pic_name as $pics) {
+                        echo $pics->pic_name;
+                    } ?>
                 </div>
 
                 <div class="links">
