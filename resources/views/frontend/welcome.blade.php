@@ -81,9 +81,13 @@
                 <div class="title m-b-md">
                     Laravel, 很高興見到你, {{$name}}
                     <?php
-                    foreach ($pic_name as $pics) {
-                        echo $pics->pic_name;
-                    } ?>
+                 //   foreach ($pic_name as $pics) {
+                 //       echo $pics->pic_name;
+                 //   }  
+                    foreach ($db_name as $db_list) {
+                        echo $db_list->db_name;
+                        echo "\n";
+                    } ?>                    
                 </div>
 
                 <div class="links">

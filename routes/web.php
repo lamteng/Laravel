@@ -1,8 +1,15 @@
 <?php
-namespace App\Http\Controllers;
+
 use Illuminate\Support\Facades\Route;
+
+// using SQL to connect
 use Illuminate\Support\Facades\DB;
-use App\Http\Controllers\Controller;
+
+// using Eloquent ORM
+use App\Models\pics;
+
+// usig Eloquent ORM for db_list
+use App\Models\db_list;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,8 +21,17 @@ use App\Http\Controllers\Controller;
 | contains the "web" middleware group. Now create something great!
 |
 */
+$pic_name = App\Models\pics::all();
 
 Route::get('/', function () {
-$pic_name = DB::select('select pic_name from pics where pic_id = 1', [1]);    
- return view('frontend.welcome',['name'=> 'Bro'],['pic_name'=> $pic_name]);
+    // using SQL
+    //$pic_name = DB::select('select pic_name from pics where pic_id = ?', [1]);    
+    
+    // using Eloquent ORM
+    $pic_name = App\Models\pics::where('pic_id','=','1')->get();
+
+   // using Eloquent ORM for table db_list
+   $db_name = App\Models\db_list::all();
+
+    return view('frontend.welcome',['name'=> 'lets meet'],['db_name'=> $db_name]);
 });
