@@ -37,7 +37,7 @@ Route::get('/', function () {
    $db_name = App\Models\db_list::all();
  
 
-   return view('frontend.welcome',['name'=> 'lets meet'],['db_name'=> $db_name]);
+   return view('frontend.welcome',['name'=> ''],['db_name'=> $db_name]);
 });
 
 

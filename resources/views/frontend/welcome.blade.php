@@ -84,21 +84,35 @@
                  //   foreach ($pic_name as $pics) {
                  //       echo $pics->pic_name;
                  //   }  
-                    foreach ($db_name as $db_list) {
-                        echo $db_list->db_name;
-                       echo "\n";
-                    } 
+                 //   foreach ($db_name as $db_list) {
+                 //       echo $db_list->db_name;
+                 //      echo "\n";
+                 //   } 
                     ?>                    
                         
                 </div>
-
                 <div class="links">
                     <a href="https://laravel.com/docs">Documentation</a>
                     <a href="https://laracasts.com">Laracasts</a>
                     <a href="https://laravel-news.com">News</a>
                     <a href="https://forge.laravel.com">Forge</a>
                     <a href="https://github.com/laravel/laravel">GitHub</a>
+                    <a href="">DB: <?php             
+                        foreach ($db_name as $db_list) {
+                        echo $db_list->db_name;
+                       echo " ";
+                        }?>
+                    </a>
                 </div>
+                <br>
+                <hr>
+                <form action="welcome.php" method="post">
+                    Name: <input type="text" name="name"><br>
+                    E-mail: <input type="text" name="email"><br>
+                    <input type="submit">
+                </form>
+                <hr>
+                <pre style="font-size:70%;color:tomato;">Copyright 2020 by Self. All Rights Reserved.</pre>
             </div>
         </div>
     </body>
