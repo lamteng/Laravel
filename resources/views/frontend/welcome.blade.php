@@ -86,8 +86,10 @@
                  //   }  
                     foreach ($db_name as $db_list) {
                         echo $db_list->db_name;
-                        echo "\n";
-                    } ?>                    
+                       echo "\n";
+                    } 
+                    ?>                    
+                        
                 </div>
 
                 <div class="links">

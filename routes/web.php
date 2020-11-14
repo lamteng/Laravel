@@ -11,6 +11,9 @@ use App\Models\pics;
 // usig Eloquent ORM for db_list
 use App\Models\db_list;
 
+// using Redis
+use App\Models\redi;
+use Illuminate\Support\Facades\Redis;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -21,7 +24,7 @@ use App\Models\db_list;
 | contains the "web" middleware group. Now create something great!
 |
 */
-$pic_name = App\Models\pics::all();
+
 
 Route::get('/', function () {
     // using SQL
@@ -32,6 +35,9 @@ Route::get('/', function () {
 
    // using Eloquent ORM for table db_list
    $db_name = App\Models\db_list::all();
+ 
 
-    return view('frontend.welcome',['name'=> 'lets meet'],['db_name'=> $db_name]);
+   return view('frontend.welcome',['name'=> 'lets meet'],['db_name'=> $db_name]);
 });
+
+

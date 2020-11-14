@@ -5,8 +5,10 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class pics extends Model
+use Illuminate\Support\Facades\Redis;
+
+class redi extends Redis
 {
     use HasFactory;
-//    protected $table = 'pics';
+
 }
