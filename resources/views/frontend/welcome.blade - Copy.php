@@ -118,7 +118,7 @@
                     Name: <input type="text" name="name"><br>
                     E-mail: <input type="text" name="email"><br>
                     <input type="submit">
- 
+                <!-- comment -->
                 </form>
                 <pre style="font-size:110%;color:tomato;">Copyright 2020 by Self. All Rights Reserved.
                 </pre>
