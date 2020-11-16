@@ -66,28 +66,18 @@
         </style>
     </head>
     <body>
-        <!-- React root DOM -->
-        <div id="user">
-        </div>
-    
-        <!-- React JS -->
-        <script src="{{ asset('js/app.js') }}" defer></script>
+
+
+
+
+
+
     
         <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
-                        <a href="{{ route('register') }}">Register</a>
-                    @endauth
-                </div>
-            @endif
-
             <div class="content">
+ 
                 <div class="title m-b-md">
-                    Laravel, 很高興見到你, {{$name}}
+                    Laravel Learning Forum {{$name}}
                     <?php
                  //   foreach ($pic_name as $pics) {
                  //       echo $pics->pic_name;
@@ -107,8 +97,8 @@
                     <a href="https://github.com/laravel/laravel">GitHub</a>
                     <a href="https://laravel.com/docs/8.x/redis">DB: <?php             
                         foreach ($db_name as $db_list) {
-                        echo $db_list->db_name;
-                       echo " ";
+                            echo $db_list->db_name;
+                            echo " ";
                         }?>
                     </a>
                 </div>
@@ -117,11 +107,18 @@
                 <form action="welcome.php" method="post">
                     Name: <input type="text" name="name"><br>
                     E-mail: <input type="text" name="email"><br>
-                    <input type="submit">
- 
+                    <input type="submit">    
                 </form>
+                <!-- React root DOM -->
+                <div id="user">
+                </div>
+            
+                <!-- React JS -->
+                <script src="{{ asset('js/app.js') }}" defer></script>                
+                <div class="content">
                 <pre style="font-size:110%;color:tomato;">Copyright 2020 by Self. All Rights Reserved.
                 </pre>
+                </div>
             </div>
         </div>
     </body>
