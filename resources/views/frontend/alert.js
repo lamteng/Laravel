@@ -1,1 +1,2 @@
-alert("Wait for help!");
+let waitforhelp = "Wait for help"; 
+alert(waitforhelp);
