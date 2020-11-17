@@ -65,17 +65,9 @@
             }
         </style>
     </head>
-    <body>
-
-
-
-
-
-
-    
+    <body>    
         <div class="flex-center position-ref full-height">
-            <div class="content">
- 
+            <div class="content"> 
                 <div class="title m-b-md">
                     Laravel Learning Forum {{$name}}
                     <?php
@@ -107,7 +99,7 @@
                 <form action="welcome.php" method="post">
                     Name: <input type="text" name="name"><br>
                     E-mail: <input type="text" name="email"><br>
-                    <input type="submit">    
+                    <input type="submit">  <script src="/alert.js"></script>  
                 </form>
                 <!-- React root DOM -->
                 <div id="user">
