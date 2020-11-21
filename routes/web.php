@@ -48,3 +48,15 @@ Route::get('master', function () {
     return view('frontend.layouts.master');
 })->name('master');
 
+
+Route::get('home', function () {
+    return view('frontend.layouts.home');
+})->name('home');
+
+Route::get('topnav', function () {
+    return view('frontend.layouts.topnav');
+})->name('topnav');
+
+Route::get('sidenav', function () {
+    return view('frontend.layouts.sidenav');
+})->name('sidenav');
