@@ -96,11 +96,11 @@
                 </div>
                 <br>
                 <hr>
-                <form action="welcome.php" method="post">
+                <form action="{{ route('mainpage')}}" >
                     Name: <input type="text" name="name"><br>
                     E-mail: <input type="text" name="email"><br>
                     <input type="submit">  
-                    <script src="alert.js"></script>  
+  
                 </form>
                 <!-- React root DOM -->
                 <div id="user">

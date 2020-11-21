@@ -40,4 +40,11 @@ Route::get('/', function () {
    return view('frontend.welcome',['name'=> ''],['db_name'=> $db_name]);
 });
 
+Route::get('mainpage', function () {
+    return view('frontend.layouts.mainpage');
+})->name('mainpage');
+
+Route::get('master', function () {
+    return view('frontend.layouts.master');
+})->name('master');
 
